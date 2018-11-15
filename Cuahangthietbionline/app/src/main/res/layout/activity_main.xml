@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.quangviet.cuahangthietbionline.activity.MainActivity">
+   <android.support.v4.widget.DrawerLayout
+       android:id="@+id/drawerlayout"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <LinearLayout
+           android:orientation="vertical"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+           <android.support.v7.widget.Toolbar
+               android:id="@+id/toolbarmanhinhchinh"
+               android:background="#B71C1C"
+               app:title="Trang Chính"
+               app:titleTextColor="#FFFFFF"
+               android:layout_width="match_parent"
+               android:layout_height="?attr/actionBarSize">
+
+           </android.support.v7.widget.Toolbar>
+           <ViewFlipper
+               android:id="@+id/viewflipper"
+               android:layout_width="match_parent"
+               android:layout_height="140dp">
+            </ViewFlipper>
+
+           <!--<Button-->
+               <!--android:text="Sản phẩm mới"-->
+               <!--android:textAllCaps="false"-->
+               <!--android:id="@+id/btnNewProduct"-->
+               <!--android:layout_width="wrap_content"-->
+               <!--android:layout_height="wrap_content" />-->
+
+           <android.support.design.widget.TabLayout
+               android:id="@+id/tabLayout"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
+
+               <android.support.design.widget.TabItem
+                   android:id="@+id/tabNewProduct"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Sản phẩm mới nhất" />
+
+               <android.support.design.widget.TabItem
+                   android:id="@+id/tabHotProduct"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Sản phẩm nổi bật" />
+
+
+           </android.support.design.widget.TabLayout>
+
+           <FrameLayout
+               android:id="@+id/content"
+               android:layout_weight="1"
+               android:layout_width="match_parent"
+               android:layout_height="0dp">
+
+               <FrameLayout
+                   android:id="@+id/frame_layout"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"/>
+
+           </FrameLayout>
+
+           
+       </LinearLayout>
+       <android.support.design.widget.NavigationView
+           android:id="@+id/navigationview"
+           android:layout_gravity="start"
+           android:layout_width="300dp"
+           android:layout_height="match_parent">
+           <ListView
+               android:id="@+id/listviewmanhinhchinh"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"></ListView>
+
+       </android.support.design.widget.NavigationView>
+   </android.support.v4.widget.DrawerLayout> 
+
+</LinearLayout>
